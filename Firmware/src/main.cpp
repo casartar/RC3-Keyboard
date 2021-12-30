@@ -19,40 +19,10 @@ void setup() {
 }
 
 void loop() {
-    if (!digitalRead(button_1)) {
-        Keyboard.press('1');
-    }
-    else {
-        Keyboard.release('1');
-    }
-    if (!digitalRead(button_2)) {
-        Keyboard.press('2');
-    }
-    else {
-        Keyboard.release('2');
-    }
-    if (!digitalRead(button_3)) {
-        Keyboard.press('3');
-    }
-    else {
-        Keyboard.release('3');
-    }
-    if (!digitalRead(button_4)) {
-        Keyboard.press('4');
-    }
-    else {
-        Keyboard.release('4');
-    }
-    if (!digitalRead(button_5)) {
-        Keyboard.press('5');
-    }
-    else {
-        Keyboard.release('5');
-    }
-    if (!digitalRead(button_6)) {
-        Keyboard.press('6');
-    }
-    else {
-        Keyboard.release('6');
-    }
+    digitalRead(button_1) ? Keyboard.release(KEY_LEFT_SHIFT) : Keyboard.press(KEY_LEFT_SHIFT);
+    digitalRead(button_2) ? Keyboard.release('2') : Keyboard.press('2');
+    digitalRead(button_3) ? Keyboard.release('3') : Keyboard.press('3');
+    digitalRead(button_4) ? Keyboard.release('4') : Keyboard.press('4');
+    digitalRead(button_5) ? Keyboard.release('5') : Keyboard.press('5');
+    digitalRead(button_6) ? Keyboard.release('6') : Keyboard.press('6');
 }

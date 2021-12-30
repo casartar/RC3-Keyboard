@@ -19,10 +19,18 @@ void setup() {
 }
 
 void loop() {
-    digitalRead(button_1) ? Keyboard.release(KEY_LEFT_SHIFT) : Keyboard.press(KEY_LEFT_SHIFT);
-    digitalRead(button_2) ? Keyboard.release('2') : Keyboard.press('2');
-    digitalRead(button_3) ? Keyboard.release('3') : Keyboard.press('3');
-    digitalRead(button_4) ? Keyboard.release('4') : Keyboard.press('4');
-    digitalRead(button_5) ? Keyboard.release('5') : Keyboard.press('5');
-    digitalRead(button_6) ? Keyboard.release('6') : Keyboard.press('6');
+    //button 6 acts as a kind of shift key
+    if(digitalRead(button_6)){
+        digitalRead(button_1) ? Keyboard.release(KEY_F13) : Keyboard.press(KEY_F13);
+        digitalRead(button_2) ? Keyboard.release(KEY_F14) : Keyboard.press(KEY_F14);
+        digitalRead(button_3) ? Keyboard.release(KEY_F15) : Keyboard.press(KEY_F15);
+        digitalRead(button_4) ? Keyboard.release(KEY_F16) : Keyboard.press(KEY_F16);
+        digitalRead(button_5) ? Keyboard.release(KEY_F17) : Keyboard.press(KEY_F17);
+    }else{
+        digitalRead(button_1) ? Keyboard.release(KEY_F18) : Keyboard.press(KEY_F18);
+        digitalRead(button_2) ? Keyboard.release(KEY_F19) : Keyboard.press(KEY_F19);
+        digitalRead(button_3) ? Keyboard.release(KEY_F20) : Keyboard.press(KEY_F20);
+        digitalRead(button_4) ? Keyboard.release(KEY_F21) : Keyboard.press(KEY_F21);
+        digitalRead(button_5) ? Keyboard.release(KEY_F22) : Keyboard.press(KEY_F22);
+    }
 }
